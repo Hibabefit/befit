@@ -20,18 +20,26 @@
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       display: flex;
-      flex-direction: column; /* تغيير الاتجاه إلى عمودي */
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .text-content {
+      width: 48%; /* النصف الأيمن */
+      display: flex;
+      flex-direction: column;
     }
     .arabic {
       text-align: right;
       direction: rtl;
-      width: 100%;
     }
-    .english, .image {
+    .english {
       text-align: left;
-      margin-top: 20px; /* لإضافة مسافة بين الأقسام */
+      margin-top: 20px; /* إضافة مسافة بين العربي والإنجليزي */
     }
-    .image img {
+    .image-container {
+      width: 48%; /* النصف الأيسر */
+    }
+    .image-container img {
       max-width: 100%;
       height: auto;
       border-radius: 10px;
@@ -63,39 +71,42 @@
 <body>
   <h1>Fitness Center</h1>
   <div class="container">
-    <!-- قسم اللغة العربية -->
-    <div class="arabic">
-      <h2>برنامج العناية الصحية الشاملة</h2>
-      <p>يقدم لك برنامج العناية الصحية الشاملة خطة متكاملة للحفاظ على صحتك ولياقتك البدنية. يتم تخصيص البرنامج لكل شخص على حدة وفقًا لاحتياجاته الفردية، ويشمل ما يلي:</p>
-      <ul>
-        <li>تحديد أهداف صحية واقعية ومحددة</li>
-        <li>خطة تغذية متوازنة ومدروسة تناسب احتياجاتك</li>
-        <li>برنامج تدريب رياضي شامل يتضمن تمارين مختلفة لبناء العضلات، تحسين اللياقة البدنية، وإنقاص الوزن</li>
-        <li>متابعة دورية وتقييم للنتائج وتعديل الخطة عند الضرورة</li>
-      </ul>
-      <p>سنعمل معك عن كثب لضمان تحقيق أهدافك الصحية بشكل آمن وفعال.</p>
-      <p>اشترك الآن واستفد من خصومات خاصة وحوافز ترويجية!</p>
-      <a href="/register" class="btn">اشترك الآن</a>
+    <!-- قسم النصوص -->
+    <div class="text-content">
+      <!-- اللغة العربية -->
+      <div class="arabic">
+        <h2>برنامج العناية الصحية الشاملة</h2>
+        <p>يقدم لك برنامج العناية الصحية الشاملة خطة متكاملة للحفاظ على صحتك ولياقتك البدنية. يتم تخصيص البرنامج لكل شخص على حدة وفقًا لاحتياجاته الفردية، ويشمل ما يلي:</p>
+        <ul>
+          <li>تحديد أهداف صحية واقعية ومحددة</li>
+          <li>خطة تغذية متوازنة ومدروسة تناسب احتياجاتك</li>
+          <li>برنامج تدريب رياضي شامل يتضمن تمارين مختلفة لبناء العضلات، تحسين اللياقة البدنية، وإنقاص الوزن</li>
+          <li>متابعة دورية وتقييم للنتائج وتعديل الخطة عند الضرورة</li>
+        </ul>
+        <p>سنعمل معك عن كثب لضمان تحقيق أهدافك الصحية بشكل آمن وفعال.</p>
+        <p>اشترك الآن واستفد من خصومات خاصة وحوافز ترويجية!</p>
+        <a href="/register" class="btn">اشترك الآن</a>
+      </div>
+
+      <!-- اللغة الإنجليزية -->
+      <div class="english">
+        <h2>Comprehensive Health Care Program</h2>
+        <p>The Comprehensive Health Care Program offers you an integrated plan to maintain your health and physical fitness. The program is tailored to each individual's specific needs and includes the following:</p>
+        <ul>
+          <li>Setting realistic and specific health goals</li>
+          <li>A balanced and well-designed nutrition plan to meet your needs</li>
+          <li>A comprehensive exercise program including various exercises for muscle building, improving physical fitness, and weight loss</li>
+          <li>Regular follow-up and evaluation of results, and adjustment of the plan as needed</li>
+        </ul>
+        <p>We will work closely with you to ensure that you achieve your health goals safely and effectively.</p>
+        <p>Subscribe now and benefit from special discounts and promotional offers!</p>
+        <a href="/register" class="btn">Subscribe Now</a>
+      </div>
     </div>
 
     <!-- قسم الصورة -->
-    <div class="image">
-      <img src="images/your_image_name.jpg" alt="وصف للصورة">
-    </div>
-
-    <!-- قسم اللغة الإنجليزية -->
-    <div class="english">
-      <h2>Comprehensive Health Care Program</h2>
-      <p>The Comprehensive Health Care Program offers you an integrated plan to maintain your health and physical fitness. The program is tailored to each individual's specific needs and includes the following:</p>
-      <ul>
-        <li>Setting realistic and specific health goals</li>
-        <li>A balanced and well-designed nutrition plan to meet your needs</li>
-        <li>A comprehensive exercise program including various exercises for muscle building, improving physical fitness, and weight loss</li>
-        <li>Regular follow-up and evaluation of results, and adjustment of the plan as needed</li>
-      </ul>
-      <p>We will work closely with you to ensure that you achieve your health goals safely and effectively.</p>
-      <p>Subscribe now and benefit from special discounts and promotional offers!</p>
-      <a href="/register" class="btn">Subscribe Now</a>
+    <div class="image-container">
+      <img src="images/1.jpg" alt="وصف للصورة">
     </div>
   </div>
 
