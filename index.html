@@ -1,4 +1,6 @@
-<html><head><base href="https://fitnesscenter.example.com/">
+<html>
+<head>
+  <base href="https://fitnesscenter.example.com/">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fitness Center - برنامج العناية الصحية الشاملة</title>
@@ -18,10 +20,22 @@
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       display: flex;
-      justify-content: space-between;
+      flex-direction: column; /* تغيير الاتجاه إلى عمودي */
     }
-    .arabic, .english {
-      width: 48%;
+    .arabic {
+      text-align: right;
+      direction: rtl;
+      width: 100%;
+    }
+    .english, .image {
+      text-align: left;
+      margin-top: 20px; /* لإضافة مسافة بين الأقسام */
+    }
+    .image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
     h1 {
       color: #0f3460;
@@ -31,13 +45,6 @@
     p {
       font-size: 18px;
       line-height: 1.5;
-    }
-    .arabic {
-      text-align: right;
-      direction: rtl;
-    }
-    .english {
-      text-align: left;
     }
     .btn {
       display: inline-block;
@@ -56,6 +63,7 @@
 <body>
   <h1>Fitness Center</h1>
   <div class="container">
+    <!-- قسم اللغة العربية -->
     <div class="arabic">
       <h2>برنامج العناية الصحية الشاملة</h2>
       <p>يقدم لك برنامج العناية الصحية الشاملة خطة متكاملة للحفاظ على صحتك ولياقتك البدنية. يتم تخصيص البرنامج لكل شخص على حدة وفقًا لاحتياجاته الفردية، ويشمل ما يلي:</p>
@@ -69,6 +77,13 @@
       <p>اشترك الآن واستفد من خصومات خاصة وحوافز ترويجية!</p>
       <a href="/register" class="btn">اشترك الآن</a>
     </div>
+
+    <!-- قسم الصورة -->
+    <div class="image">
+      <img src="images/your_image_name.jpg" alt="وصف للصورة">
+    </div>
+
+    <!-- قسم اللغة الإنجليزية -->
     <div class="english">
       <h2>Comprehensive Health Care Program</h2>
       <p>The Comprehensive Health Care Program offers you an integrated plan to maintain your health and physical fitness. The program is tailored to each individual's specific needs and includes the following:</p>
@@ -83,7 +98,7 @@
       <a href="/register" class="btn">Subscribe Now</a>
     </div>
   </div>
-  
+
   <script>
     // Add any necessary JavaScript code here
   </script>
